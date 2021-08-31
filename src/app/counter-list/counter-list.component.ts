@@ -21,11 +21,11 @@ export class CounterListComponent implements OnInit {
   }
 
   subtract(){
-
+    this.counters[this.counters.length-1].subtract;
   }
 
   add(){
-
+    this.counters[this.counters.length-1].add;
   }
 
   ngOnInit(): void {
