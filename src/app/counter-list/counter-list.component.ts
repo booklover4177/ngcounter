@@ -20,6 +20,14 @@ export class CounterListComponent implements OnInit {
 
   }
 
+  subtract(){
+
+  }
+
+  add(){
+
+  }
+
   ngOnInit(): void {
   }
 

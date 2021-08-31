@@ -2,5 +2,10 @@
   <h1>{{name}}</h1>
   <button (click)="create()">Create Counter</button>
   <div *ngFor="let counter of counters">{{counter.value}}</div>
+  <button (click)="subtract()">
+    <ng-container *ngFor="let counter of counters">
+      <div *ngIf="counter.value"!=0></div>
+    </ng-container>-</button>
+  <button (click)="add()">+</button>
 </div>
 
