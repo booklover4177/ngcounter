@@ -1,9 +1,9 @@
 <div class='py-5'>
   <h1>{{name}}</h1>
   <button id="createCounter" (click)="create()">Create</button>
-  <div *ngFor="let counter of counters">{{counter.value}}</div>
-  <div class="superCounter" *ngFor="let superCounter of superCounters">{{superCounter.value}}</div>
   <button id="minusBtn" (click)="subtract()">-</button>
   <button id="plusBtn" (click)="add()">+</button>
+  <div *ngFor="let counter of counters">{{counter.value}}</div>
+  <div class="superCounter" *ngFor="let superCounter of superCounters">{{superCounter.value2}}</div>
 </div>
 
