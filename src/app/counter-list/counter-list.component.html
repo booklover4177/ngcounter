@@ -1,6 +1,6 @@
 <div class='py-5'>
   <h1>{{name}}</h1>
-  <button (click)="create()">Create Counter</button>
+  <button id="createCounter" (click)="create()">Create Counter</button>
   <div *ngFor="let counter of counters">{{counter.value}}</div>
   <button (click)="subtract()">-</button>
   <button (click)="add()">+</button>

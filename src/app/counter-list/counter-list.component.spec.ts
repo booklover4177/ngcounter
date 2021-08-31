@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { AppComponent } from '../app.component';
 
 import { CounterListComponent } from './counter-list.component';
 
@@ -22,4 +23,11 @@ describe('CounterListComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it("create button should create a counter", ()=>{
+    const createCounterBtn=fixture.nativeElement.querySelector("#createCounter");
+    createCounterBtn.click();
+    expect(component.counters.length).toBe(1);
+
+  })
 });
