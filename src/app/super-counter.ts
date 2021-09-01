@@ -5,13 +5,16 @@ export class SuperCounter {
     this.value2 = val1 + val2 + val3;
   }
 
-  subtract() {
+  public superSubtract() {
     if (this.value2 === 0) {
       return;
-
     }
-  }
 
+
+  }
+  public superAdd() {
+    this.value2 = this.value2 + 3;
+  }
 
 
 }

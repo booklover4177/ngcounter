@@ -89,6 +89,18 @@ describe('CounterListComponent', () => {
 
   })
 
+  it("when there is a supercounter and you press the add button it will add 3 to the value", () => {
+    const createCounterBtn = fixture.nativeElement.querySelector("#createCounter");
+    createCounterBtn.click();
+    createCounterBtn.click();
+    createCounterBtn.click();
+    createCounterBtn.click();
+    const addBtn = fixture.nativeElement.querySelector("#plusBtn");
+    addBtn.click();
+    expect(component.superCounters[component.superCounters.length - 1].value2).toEqual(3);
+
+  })
+
 
 
 });
