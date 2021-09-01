@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Counter } from '../counter';
 import { SuperCounter } from '../super-counter';
 import { SuperDuperCounter } from '../super-duper-counter';
+import { ColossalCounter } from '../colossal-counter';
 
 
 @Component({
@@ -15,6 +16,7 @@ export class CounterListComponent implements OnInit {
   counters: Counter[] = [];
   superCounters: SuperCounter[] = [];
   superDuperCounters: SuperDuperCounter[]=[];
+  colossalCounters: ColossalCounter[]=[];
 
   constructor() { }
 

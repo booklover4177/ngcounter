@@ -9,4 +9,5 @@
   <div *ngIf ="superDuperCounters.length!=0">
 <button id="SuperDuperCounterStart" (click)="add()" (click)="checkValueOfSuperDuper()">Start</button>
 </div>
+<div class="colossalCounter" *ngFor="let colossalCounter of colossalCounters">{{colossalCounter.value4}}</div>
 
