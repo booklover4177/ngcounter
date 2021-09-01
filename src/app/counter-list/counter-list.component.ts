@@ -39,7 +39,7 @@ export class CounterListComponent implements OnInit {
     if (this.counters.length != 0) {
       this.counters[this.counters.length - 1].subtract();
     }
-    if (this.superCounters.length != 0) {
+    if (this.superCounters.length != 0 && this.counters.length===0) {
       this.superCounters[this.superCounters.length - 1].superSubtract();
     }
 
@@ -49,7 +49,7 @@ export class CounterListComponent implements OnInit {
     if (this.counters.length != 0) {
       this.counters[this.counters.length - 1].add();
     }
-    if (this.superCounters.length != 0) {
+    if (this.superCounters.length != 0 && this.counters.length===0) {
       this.superCounters[this.superCounters.length - 1].superAdd();
     }
 
