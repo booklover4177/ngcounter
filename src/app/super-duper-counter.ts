@@ -1,3 +1,5 @@
+import { Counter } from "./counter";
+
 export class SuperDuperCounter {
   public value3:number;
   public date:Date;
@@ -12,6 +14,10 @@ export class SuperDuperCounter {
   }
 
   public superDuperAdd(){
+    // if(this.value3%20===0){
+    //   new Counter();
+
+    // }
     this.value3++;
   }
 }

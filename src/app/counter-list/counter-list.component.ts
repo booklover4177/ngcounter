@@ -21,9 +21,10 @@ export class CounterListComponent implements OnInit {
   create() {
 
     if (this.counters.length < 3) {
-      let newCounter = new Counter();
-      this.counters.push(newCounter);
+      this.createCounter();
+
     } else if((this.counters.length=== 3) && (this.superCounters.length===2)){
+
       this.createSuperCounter();
       this.createSuperDuperCounter();
 
@@ -34,6 +35,11 @@ export class CounterListComponent implements OnInit {
     }
 
 
+  }
+
+  createCounter(){
+    let newCounter = new Counter();
+    this.counters.push(newCounter);
   }
 
   createSuperCounter(){
@@ -71,16 +77,19 @@ export class CounterListComponent implements OnInit {
   }
 
   add() {
-    if (this.counters.length != 0) {
+    if (this.counters.length != 0 && this.superDuperCounters.length===0) {
       this.counters[this.counters.length - 1].add();
     }
+
+
     if (this.superCounters.length != 0 && this.counters.length===0) {
       this.superCounters[this.superCounters.length - 1].superAdd();
     }
 
     if(this.superDuperCounters.length!=0){
-         this.superDuperCounters[this.superDuperCounters.length-1].superDuperAddPerSec();
-    }
+      this.superDuperCounters[this.superDuperCounters.length-1].superDuperAddPerSec();
+ }
+
   }
 
 
