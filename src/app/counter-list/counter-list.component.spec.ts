@@ -61,6 +61,7 @@ describe('CounterListComponent', () => {
     expect(component.counters.length).toEqual(0);
     expect(component.superCounters.length).toEqual(1);
     expect(component.superCounters[component.superCounters.length-1].value2).toEqual(3);
-
   })
+
+
 });
