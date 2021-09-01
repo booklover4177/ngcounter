@@ -9,23 +9,23 @@ import { SuperCounter } from '../super-counter';
 })
 export class CounterListComponent implements OnInit {
 
-  public name:string="Counter Wall";
-  counters:Counter[]=[];
-  superCounters:SuperCounter[]=[];
+  public name: string = "Counter Wall";
+  counters: Counter[] = [];
+  superCounters: SuperCounter[] = [];
 
   constructor() { }
 
-  create(){
+  create() {
 
-    if(this.counters.length<3){
-      let newCounter=new Counter();
+    if (this.counters.length < 3) {
+      let newCounter = new Counter();
       this.counters.push(newCounter);
-    }else{
-      let counterVal1=this.counters[0].value;
-      let counterVal2=this.counters[1].value;
-      let counterVal3=this.counters[2].value;
+    } else {
+      let counterVal1 = this.counters[0].value;
+      let counterVal2 = this.counters[1].value;
+      let counterVal3 = this.counters[2].value;
 
-      let newSuperCounter=new SuperCounter(counterVal1, counterVal2, counterVal3);
+      let newSuperCounter = new SuperCounter(counterVal1, counterVal2, counterVal3);
       this.superCounters.push(newSuperCounter);
       this.counters.pop();
       this.counters.pop();
@@ -35,13 +35,18 @@ export class CounterListComponent implements OnInit {
 
   }
 
-  subtract(){
-    this.counters[this.counters.length-1].subtract();
+  subtract() {
+    this.counters[this.counters.length - 1].subtract();
+    if (this.superCounters.length != 0) {
+      this.superCounters[this.superCounters.length - 1].subtract();
+    }
+
   }
 
-  add(){
-    this.counters[this.counters.length-1].add();
+  add() {
+    this.counters[this.counters.length - 1].add();
   }
+
 
   ngOnInit(): void {
   }
