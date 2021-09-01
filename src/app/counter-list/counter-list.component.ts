@@ -3,6 +3,7 @@ import { Counter } from '../counter';
 import { SuperCounter } from '../super-counter';
 import { SuperDuperCounter } from '../super-duper-counter';
 
+
 @Component({
   selector: 'app-counter-list',
   templateUrl: './counter-list.component.html',
@@ -26,7 +27,7 @@ export class CounterListComponent implements OnInit {
       this.createSuperCounter();
       this.createSuperDuperCounter();
 
-    }else{
+  }else{
 
       this.createSuperCounter();
 
@@ -77,6 +78,9 @@ export class CounterListComponent implements OnInit {
       this.superCounters[this.superCounters.length - 1].superAdd();
     }
 
+    if(this.superDuperCounters.length!=0){
+         this.superDuperCounters[this.superDuperCounters.length-1].superDuperAddPerSec();
+    }
   }
 
 

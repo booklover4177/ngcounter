@@ -7,6 +7,6 @@
   <div class="superCounter" *ngFor="let superCounter of superCounters">{{superCounter.value2}}</div>
   <div class="superDuperCounter" *ngFor="let superDuperCounter of superDuperCounters">{{superDuperCounter.value3}}</div>
   <div *ngIf ="superDuperCounters.length!=0">
-<button id="SuperDuperCounterStart">Start</button>
+<button id="SuperDuperCounterStart" (click)="add()">Start</button>
 </div>
 

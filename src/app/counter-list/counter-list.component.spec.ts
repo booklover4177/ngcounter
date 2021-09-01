@@ -2,7 +2,9 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { countReset } from 'node:console';
 import { AppComponent } from '../app.component';
 import { SuperCounter } from 'src/app/super-counter'
+import { SuperDuperCounter } from '../super-duper-counter';
 import { CounterListComponent } from './counter-list.component';
+import { SelectMultipleControlValueAccessor } from '@angular/forms';
 
 describe('CounterListComponent', () => {
   let component: CounterListComponent;
@@ -116,6 +118,70 @@ describe('CounterListComponent', () => {
 
   })
 
+  it("Create Super Duper Counter", ()=>{
+    const createCounterBtn = fixture.nativeElement.querySelector("#createCounter");
+    createCounterBtn.click();
+    createCounterBtn.click();
+    createCounterBtn.click();
+    //create super counter 2
+    createCounterBtn.click();
+    createCounterBtn.click();
+    createCounterBtn.click();
+    //3rd super counter
+    createCounterBtn.click();
+    createCounterBtn.click();
+    createCounterBtn.click();
+//create super duper counter
+    createCounterBtn.click();
+    createCounterBtn.click();
+    createCounterBtn.click();
+    expect(component.superDuperCounters[component.superDuperCounters.length-1].value3).toEqual(0);
+  })
+
+  it("the super duper counter is displayed twice the size of the super counter and is a different color", () => {
+    const createCounterBtn = fixture.nativeElement.querySelector("#createCounter");
+    createCounterBtn.click();
+    createCounterBtn.click();
+    createCounterBtn.click();
+    //create super counter 2
+    createCounterBtn.click();
+    createCounterBtn.click();
+    createCounterBtn.click();
+    //3rd super counter
+    createCounterBtn.click();
+    createCounterBtn.click();
+    createCounterBtn.click();
+//create super duper counter
+    createCounterBtn.click();
+    createCounterBtn.click();
+    createCounterBtn.click();
+
+    expect(component.superDuperCounters[0] instanceof SuperDuperCounter).toBeTruthy();
+
+  })
+
+//   it("super duper counter increments after start button is clicked", ()=>{
+//     const createCounterBtn = fixture.nativeElement.querySelector("#createCounter");
+//     createCounterBtn.click();
+//     createCounterBtn.click();
+//     createCounterBtn.click();
+//     //create super counter 2
+//     createCounterBtn.click();
+//     createCounterBtn.click();
+//     createCounterBtn.click();
+//     //3rd super counter
+//     createCounterBtn.click();
+//     createCounterBtn.click();
+//     createCounterBtn.click();
+// //create super duper counter
+//     createCounterBtn.click();
+//     createCounterBtn.click();
+//     createCounterBtn.click();
+
+//     const startBtn=fixture.nativeElement.querySelector("#SuperDuperCounterStart");
+//     startBtn.click();
+//     expect(component.superDuperCounters[0].value3).toBeGreaterThan(0);
+//   })
 
 
 
