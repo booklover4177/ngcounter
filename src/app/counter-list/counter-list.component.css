@@ -1,3 +1,8 @@
 .superCounter{
   font-size: 200%;
 }
+
+.superDuperCounter{
+  font-size: 400%;
+  color: blueviolet;
+}
