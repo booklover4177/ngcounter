@@ -100,6 +100,22 @@ describe('CounterListComponent', () => {
     expect(component.superCounters[component.superCounters.length - 1].value2).toEqual(3);
 
   })
+  it("when supercounter holds a value of 5 and the subtract button is pressed then the supercounter value decreases by 3", () => {
+    const createCounterBtn = fixture.nativeElement.querySelector("#createCounter");
+    const addBtn = fixture.nativeElement.querySelector("#plusBtn");
+    const minusBtn = fixture.nativeElement.querySelector("#minusBtn");
+    createCounterBtn.click();
+    addBtn.click();
+    createCounterBtn.click();
+    addBtn.click();
+    createCounterBtn.click();
+    createCounterBtn.click();
+    addBtn.click();
+    minusBtn.click();
+    expect(component.superCounters[component.superCounters.length - 1].value2).toEqual(2);
+
+  })
+
 
 
 

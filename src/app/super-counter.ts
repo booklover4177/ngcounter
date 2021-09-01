@@ -9,12 +9,16 @@ export class SuperCounter {
     if (this.value2 === 0) {
       return;
     }
+    if (this.value2 === 5) {
+      this.value2 = this.value2 - 3;
+    }
+    else {
+      this.value2 = this.value2 - 1;
+    }
 
 
   }
   public superAdd() {
     this.value2 = this.value2 + 3;
   }
-
-
 }
