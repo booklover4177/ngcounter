@@ -14,10 +14,7 @@ export class SuperDuperCounter {
   }
 
   public superDuperAdd(){
-    // if(this.value3%20===0){
-    //   new Counter();
 
-    // }
     this.value3++;
   }
 }

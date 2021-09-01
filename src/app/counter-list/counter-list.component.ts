@@ -92,6 +92,17 @@ export class CounterListComponent implements OnInit {
 
   }
 
+  incrementNumberOfSuperDuperCounters(){
+        if(this.superDuperCounters[this.superDuperCounters.length-1].value3%20===0){
+
+          this.createCounter();
+
+      }
+  }
+
+  checkValueOfSuperDuper(){
+    setInterval(()=>this.incrementNumberOfSuperDuperCounters(), 1000);
+  }
 
   ngOnInit(): void {
   }
